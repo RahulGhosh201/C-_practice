@@ -1,0 +1,147 @@
+Topics-> 
+variables, constants, data types, type conversions, scope, overflow and various operators..
+
+variable: a name given to a storage location in memory where we can store a value and manipulate it later to our own desire.
+constant: an immutable value, whoose value can't be changed throughout the life of the application. It's used to increase the safety in our application.
+int num;
+int Num=1;
+const float pi=3.14;
+Rule of an identifire:
+    1.an identifire can't start with a number[ 1run is wrong, run1 is ok].
+    2.can't include a whitespace[first name is wrong, firstName is ok].
+    3.can't be a keyword
+    4.prefer using a meaning full name.
+
+Naming Conventions:
+    1.Camel Case: firstName
+    2.Pascal Case: FirstName
+    3.Hungarian Notation: strFirstName
+In c# for local variables use camelCase and for constants use PascalCase.
+
+primitive types:
+1.Integral Numbers: 
+    i)byte->.NET type:BYTE 
+            in Bytes :1
+            range    :0 to 255
+
+    ii)short->.NET type:int16
+            in Bytes :2
+            range    :-32768 to 32767
+
+    iii)int->.NET type:int32
+            in Bytes :4
+            range    :-2.1B to 2.1B
+
+    iv)long->.NET type:int64
+            in Bytes :8
+            range    :
+
+2.Real Numbers:
+    i)float->.NET type:single
+            in Bytes :4
+            range    :-3.4X10^38 to 3.4X10^38
+
+    ii)double->.NET type:Double
+            in Bytes :8
+            range    :
+
+    iii)decimal->.NET type:Decimal 
+            in Bytes :16
+            range    :-7.9X10^28 to 7.9X10^28
+
+3.Character:
+    char->.NET type:Char
+            in Bytes :2
+            range    :unicode characteers
+
+4.Boolean:
+    bool->.NET type:Boolean
+            in Bytes :1
+            range    :True/False
+
+c# keywords are always lowercase.
+when you compl+ile the compiler will always convert yiur data types into .NET datatype.
+
+In case of real numbers double is deafult one, so if we want to use the variable as a float then we have to explicitly tell the compiler like this float num=1.5f;
+decimla Num=1.5m;
+So if we write float numer=1.2; it will give compilation error as it shows like we are assigning a double value in a float variable.
+
+
+Some non-primiritve data types are->
+1.string
+2.Array
+3.Enum
+4.Class
+
+--------------------------------------------------
+Concept of OverFlowing:
+    byte num=255;
+    num+=1;
+    Console.Writeline(num);//0
+in c#, we don't have built in boundary checking so once the variable goes out of boundary for a said datatype it becomes 0. It's called OverFlowing.
+To stop overflow we use checked keyword.
+
+checked{
+    byte number=255;
+    number=number+1;
+}
+
+in this case overflow will not happen in run time instead an exception will be thrown and program will crash unless you handel the exception.
+But irl generally a different variable of bigger range is assigned instead of using the smaller range and then handing it's exception.
+
+
+----------------------------------------------------
+Concept of scope:
+it's where a variable or constamt has it's meaning or accessable.
+For example: 
+class Test
+{
+    byte a=1;
+    {
+        byte b=2;
+        {
+            byte c=3;
+        }
+    }
+}
+in this code a can be accessed from anywhere in the code but c can't be accessed from the first and second block of the code.
+
+// instead of using different datatypes we can just use var keyword
+
+
+------------------------------------------------------------------------------------------
+Concept of type conversions:
+    1.Implicit type conversions
+    2.Explicit type conversions(type casting)
+    3.conversion between non-compatible types
+
+
+Implicit type conversions->
+    byte a=5;
+    int b=a;
+    it will not give any compilaton error a byte is of size 2 bytes where as int is of size 4 bytes. so a byte can be converted in a integer without any error.
+
+    but int can't be converted in a byte, as there is a chance of data loss, the compiler won't allow data conversion then to forcefully convert the data with risking of 
+    data loss we have to use explicit type conversion.
+
+Explicit type conversion->
+    int a=10;
+    byte b=(byte)a;
+    //it's also called casting.
+
+    float v=1.0;
+    int i=(float)v;
+
+    string s="1";
+    int i=(int)s;//this won't compile because a string can't be converted into a int. These comes under the not-compatible type casting.
+
+conversion between non-compatible types->
+    we use convert class or parse method
+    string s="1";
+    int i=Convert.ToInt32(s);
+    int j=int.parse(s);
+
+    parse() takes a string and converts it into the desired target type.
+
+ToByte(),ToInt16(),ToInt32(),ToInt64().
+

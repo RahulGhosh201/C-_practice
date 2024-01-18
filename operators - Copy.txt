@@ -1,0 +1,15 @@
+1.Arithmetic Operators->
+    add(+),subtract(-),multiply(*),Divide(/),percentage(%),increment(++),decrement(--)
+
+2.Comparison operators->
+    equal(==),not equal(!=),greater than(>),greater than or equal to(>=), less than(<),less than or equal to(<=)
+
+3.Assignment operators->
+    assignment(=),addition assignment(+=),subtraction assignment(-=),multiplication assignemnt(*=),dividation assignment(/=)
+
+4.Logical operator->
+    and(&&),or(||),not(!)
+
+5.Bitwise operator->[used in lower level programming like APIs,sockets,encryption]
+    and(&),or(|)
+

@@ -1,0 +1,29 @@
+namespace Helloworld
+{
+    class program
+    {
+        static void Main(string[] args)
+        {
+
+        }
+    }
+}
+
+here Helloworld is the namspace by running the code we are able to get access of any classes under it.
+If we want to use any other classes that is defined in a different namespace then we have to import it.
+
+using System;
+using System.Collection.Generic;
+using System.Linq;
+using System.Text;
+using System.Treading.Tasks;
+these are the 5 default statements.
+System is a namespace in the .NET framework, where we have all the basic utility classes and primitive types.
+Collection.Generic is used for using Collections, lists etc.
+System.Linq is used to work with data.
+System.Text is used to work with text.
+Threading is used to build multithreaded application.
+
+single-line comment uses //
+multi-line comment uses /* */
+

@@ -1,0 +1,18 @@
+if we write 
+var number="1234";
+byte b=Convert.ToByte(number);
+Console.WriteLine(b);
+it will give an exception error as byte does not hav eenough storage to store this value so in this case it will crash the program and show some exception
+To handle this exception we will use try-catch block where in the try block we will type our code and the catch block will catch the exception. Like this-
+try
+{
+    var number="1234";
+    byte b=Convert.ToByte(number);
+    Console.WriteLine(b);
+}
+catch(exception)
+{
+    Console.WriteLine("The number could not be converted in byte");//that's how it will save the program from crashing
+}
+
+//also notable thing is that if the code in the try block is executable then it executes.

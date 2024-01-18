@@ -1,0 +1,28 @@
+Differences between C# and .NET->
+C# is a programming language where as .NET is a framework for building application on windows.
+.NET framework is not only limited to c#, it allowes different languages to work on it to build different applications, examples- f#, vv.NET
+
+.NET framework consist of 2 components-
+    1. CLR(Common Language Runtime)
+    2. Class Library
+
+History of C#->
+before c# there were two other languages c and c++ where the compiler compiles our code into native code for machine's understandability.
+In case of c and c++, these languages are platform depended meaning the exe file created by the compiler can only run in windows if it's created by a windows machine.
+But in java it's a platform independent language meaning in case of java the compiler instead of creating machine language code it generates a byte code which can be processed in both windows, linux etc.
+C# follows the java mentatility here and the compiler generates IL(Intermideate Language) Code, now it generates the native code. This process is done by CLR.
+So CLR is an application that is sitting in the memory whoose job is to convert the IL code into Native code or MAchine code. This process is called Just-in-time compilation(JIT). 
+
+Architecture of .NET application->
+A c# application consists of building blocks called classes. These classes collaborate with each other at runtime and as a result some functionality happens.
+A class is a container whic contains some data which is called attribute and some functions which are called methods.
+For example, in class car the attributes are make,model,color and the functions are start(),stop(),move().
+A namespace is a container for related classes. In case of c# we have namespaces for databases,security,graphics.
+An assembly(DLL or EXE) is a container for namespaces.
+DLL stands for Dynamically length library. EXE stands for executable.
+
+So when you compile your application the compiler generates one or more assemblies depending on how you partition your code.
+Application->Assembly->namespace->class.
+
+
+
